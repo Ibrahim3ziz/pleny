@@ -102,6 +102,7 @@
 		8F8836DD2E0E3C2700E149EF /* Pleny */ = {
 			isa = PBXGroup;
 			children = (
+				8F8836EA2E0E3CE600E149EF /* Scenes */,
 				8F8836D92E0E3C2700E149EF /* Preview Content */,
 				8F8836DA2E0E3C2700E149EF /* Assets.xcassets */,
 				8F8836DB2E0E3C2700E149EF /* ContentView.swift */,
@@ -125,6 +126,157 @@
 				8F8836E62E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift */,
 			);
 			path = PlenyUITests;
+			sourceTree = "<group>";
+		};
+		8F8836EA2E0E3CE600E149EF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836EC2E0E3CF000E149EF /* Auth */,
+				8F8836EB2E0E3CEC00E149EF /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8F8836EB2E0E3CEC00E149EF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836F62E0E3D4500E149EF /* Data */,
+				8F8836F92E0E3D4500E149EF /* Domain */,
+				8F8836FC2E0E3D4500E149EF /* Presentation */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8F8836EC2E0E3CF000E149EF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836EF2E0E3D0900E149EF /* Data */,
+				8F8836EE2E0E3D0200E149EF /* Domain */,
+				8F8836ED2E0E3CF600E149EF /* Presentation */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		8F8836ED2E0E3CF600E149EF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836F12E0E3D1400E149EF /* ViewModels */,
+				8F8836F02E0E3D0F00E149EF /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8F8836EE2E0E3D0200E149EF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836F32E0E3D2800E149EF /* Entities */,
+				8F8836F22E0E3D1E00E149EF /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8F8836EF2E0E3D0900E149EF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836F42E0E3D2E00E149EF /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8F8836F02E0E3D0F00E149EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F8836F12E0E3D1400E149EF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8F8836F22E0E3D1E00E149EF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		8F8836F32E0E3D2800E149EF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8F8836F42E0E3D2E00E149EF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		8F8836F52E0E3D4500E149EF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		8F8836F62E0E3D4500E149EF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836F52E0E3D4500E149EF /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8F8836F72E0E3D4500E149EF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8F8836F82E0E3D4500E149EF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		8F8836F92E0E3D4500E149EF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836F72E0E3D4500E149EF /* Entities */,
+				8F8836F82E0E3D4500E149EF /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8F8836FA2E0E3D4500E149EF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8F8836FB2E0E3D4500E149EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F8836FC2E0E3D4500E149EF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836FA2E0E3D4500E149EF /* ViewModels */,
+				8F8836FB2E0E3D4500E149EF /* Views */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
