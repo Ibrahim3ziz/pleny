@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F8836DE2E0E3C2700E149EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836DB2E0E3C2700E149EF /* ContentView.swift */; };
+		8F8836DF2E0E3C2700E149EF /* PlenyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836DC2E0E3C2700E149EF /* PlenyApp.swift */; };
+		8F8836E02E0E3C2700E149EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8836D82E0E3C2700E149EF /* Preview Assets.xcassets */; };
+		8F8836E12E0E3C2700E149EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8836DA2E0E3C2700E149EF /* Assets.xcassets */; };
+		8F8836E42E0E3C2A00E149EF /* PlenyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836E22E0E3C2A00E149EF /* PlenyTests.swift */; };
+		8F8836E82E0E3C2C00E149EF /* PlenyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836E52E0E3C2C00E149EF /* PlenyUITests.swift */; };
+		8F8836E92E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836E62E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8F8836BC2E0E3C1F00E149EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +37,14 @@
 		8F8836AB2E0E3C1D00E149EF /* Pleny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pleny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8836BB2E0E3C1F00E149EF /* PlenyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlenyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8836C52E0E3C1F00E149EF /* PlenyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlenyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8836D82E0E3C2700E149EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F8836DA2E0E3C2700E149EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F8836DB2E0E3C2700E149EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8F8836DC2E0E3C2700E149EF /* PlenyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyApp.swift; sourceTree = "<group>"; };
+		8F8836E22E0E3C2A00E149EF /* PlenyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyTests.swift; sourceTree = "<group>"; };
+		8F8836E52E0E3C2C00E149EF /* PlenyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyUITests.swift; sourceTree = "<group>"; };
+		8F8836E62E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8F8836AD2E0E3C1D00E149EF /* Pleny */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Pleny;
-			sourceTree = "<group>";
-		};
-		8F8836BE2E0E3C1F00E149EF /* PlenyTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PlenyTests;
-			sourceTree = "<group>";
-		};
-		8F8836C82E0E3C1F00E149EF /* PlenyUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PlenyUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8F8836A82E0E3C1D00E149EF /* Frameworks */ = {
@@ -75,9 +74,9 @@
 		8F8836A22E0E3C1D00E149EF = {
 			isa = PBXGroup;
 			children = (
-				8F8836AD2E0E3C1D00E149EF /* Pleny */,
-				8F8836BE2E0E3C1F00E149EF /* PlenyTests */,
-				8F8836C82E0E3C1F00E149EF /* PlenyUITests */,
+				8F8836DD2E0E3C2700E149EF /* Pleny */,
+				8F8836E32E0E3C2A00E149EF /* PlenyTests */,
+				8F8836E72E0E3C2C00E149EF /* PlenyUITests */,
 				8F8836AC2E0E3C1D00E149EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +89,42 @@
 				8F8836C52E0E3C1F00E149EF /* PlenyUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8F8836D92E0E3C2700E149EF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836D82E0E3C2700E149EF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8F8836DD2E0E3C2700E149EF /* Pleny */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836D92E0E3C2700E149EF /* Preview Content */,
+				8F8836DA2E0E3C2700E149EF /* Assets.xcassets */,
+				8F8836DB2E0E3C2700E149EF /* ContentView.swift */,
+				8F8836DC2E0E3C2700E149EF /* PlenyApp.swift */,
+			);
+			path = Pleny;
+			sourceTree = "<group>";
+		};
+		8F8836E32E0E3C2A00E149EF /* PlenyTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836E22E0E3C2A00E149EF /* PlenyTests.swift */,
+			);
+			path = PlenyTests;
+			sourceTree = "<group>";
+		};
+		8F8836E72E0E3C2C00E149EF /* PlenyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F8836E52E0E3C2C00E149EF /* PlenyUITests.swift */,
+				8F8836E62E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift */,
+			);
+			path = PlenyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +141,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				8F8836AD2E0E3C1D00E149EF /* Pleny */,
 			);
 			name = Pleny;
 			packageProductDependencies = (
@@ -130,9 +162,6 @@
 			dependencies = (
 				8F8836BD2E0E3C1F00E149EF /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				8F8836BE2E0E3C1F00E149EF /* PlenyTests */,
-			);
 			name = PlenyTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +181,6 @@
 			);
 			dependencies = (
 				8F8836C72E0E3C1F00E149EF /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8F8836C82E0E3C1F00E149EF /* PlenyUITests */,
 			);
 			name = PlenyUITests;
 			packageProductDependencies = (
@@ -212,6 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8836E02E0E3C2700E149EF /* Preview Assets.xcassets in Resources */,
+				8F8836E12E0E3C2700E149EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8836DE2E0E3C2700E149EF /* ContentView.swift in Sources */,
+				8F8836DF2E0E3C2700E149EF /* PlenyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8836E42E0E3C2A00E149EF /* PlenyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8836E82E0E3C2C00E149EF /* PlenyUITests.swift in Sources */,
+				8F8836E92E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +467,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
