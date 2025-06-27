@@ -14,6 +14,7 @@
 		8F8836E42E0E3C2A00E149EF /* PlenyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836E22E0E3C2A00E149EF /* PlenyTests.swift */; };
 		8F8836E82E0E3C2C00E149EF /* PlenyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836E52E0E3C2C00E149EF /* PlenyUITests.swift */; };
 		8F8836E92E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836E62E0E3C2C00E149EF /* PlenyUITestsLaunchTests.swift */; };
+		8F8837182E0EE16100E149EF /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8F8837172E0EE16100E149EF /* NetworkKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8837182E0EE16100E149EF /* NetworkKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +298,7 @@
 			);
 			name = Pleny;
 			packageProductDependencies = (
+				8F8837172E0EE16100E149EF /* NetworkKit */,
 			);
 			productName = Pleny;
 			productReference = 8F8836AB2E0E3C1D00E149EF /* Pleny.app */;
@@ -373,6 +376,9 @@
 			);
 			mainGroup = 8F8836A22E0E3C1D00E149EF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F8837162E0EE16100E149EF /* XCLocalSwiftPackageReference "NetworkKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F8836AC2E0E3C1D00E149EF /* Products */;
 			projectDirPath = "";
@@ -745,6 +751,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		8F8837162E0EE16100E149EF /* XCLocalSwiftPackageReference "NetworkKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = NetworkKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F8837172E0EE16100E149EF /* NetworkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F8836A32E0E3C1D00E149EF /* Project object */;
 }
