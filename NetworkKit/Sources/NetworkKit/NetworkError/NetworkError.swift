@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Represents a high-level network error with optional message and specific typed error.
 public struct NetworkError: LocalizedError, Decodable {
     var message: String?
     var specificError: DefaultErrors?
@@ -16,6 +17,7 @@ public struct NetworkError: LocalizedError, Decodable {
     }
 }
 
+/// Enumeration of common default network-related errors.
 public enum DefaultErrors: Decodable, Sendable {
     case invalidResponse
     case serverError

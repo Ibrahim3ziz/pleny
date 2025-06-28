@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Represents a standard API response wrapper containing metadata and a data payload.
 struct BaseResponse<T: Decodable> {
     var statusCode: Int?
     var code: Int?

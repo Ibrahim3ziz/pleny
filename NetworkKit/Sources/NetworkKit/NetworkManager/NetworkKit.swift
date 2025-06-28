@@ -4,12 +4,19 @@
 import Combine
 import Foundation
 
+/// A concrete implementation of `NetworkSessionInterface` to perform HTTP requests using Combine.
 public final class NetworkManager: NetworkSessionInterface, @unchecked Sendable {
     
+    /// Shared singleton instance of `NetworkManager`.
     public static let shared = NetworkManager()
     
     private init() {}
     
+    /// Executes a network request and decodes the response into a decodable model.
+    /// - Parameters:
+    ///   - request: A type conforming to `BaseRequest`, which describes the endpoint.
+    ///   - model: The expected response model type.
+    /// - Returns: A publisher emitting either the decoded model or a `NetworkError`.
     public func execute<T: Decodable>(_ request: BaseRequest, model: T.Type) -> AnyPublisher<T, NetworkError> {
         let urlRequest = request.asURLRequest()
         let decoder = JSONDecoder()
@@ -25,6 +32,7 @@ public final class NetworkManager: NetworkSessionInterface, @unchecked Sendable 
             .eraseToAnyPublisher()
     }
     
+    /// Validates the HTTP response and returns the response data or throws a `NetworkError`.
     private func handleResponse(_ response: URLResponse, data: Data) throws -> Data {
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkError(errorType: .invalidResponse)
@@ -41,6 +49,11 @@ public final class NetworkManager: NetworkSessionInterface, @unchecked Sendable 
 }
 
 extension Publisher where Output == Data, Failure == Error {
+    /// Attempts to decode a wrapped `BaseResponse<T>` from data, falling back to decoding `T` directly if needed.
+    /// - Parameters:
+    ///   - type: The expected decodable type.
+    ///   - decoder: A `JSONDecoder` used for decoding the data.
+    /// - Returns: A publisher emitting the decoded model or an error.
     func decodeWrappedResponse<T: Decodable>(_ type: T.Type, using decoder: JSONDecoder) -> AnyPublisher<T, Error> {
         return tryMap { data in
             do {

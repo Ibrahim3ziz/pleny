@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Describes a network request specification including endpoint, headers, query parameters, and body.
 public protocol BaseRequest {
     var baseURL: String { get }
     var scheme: String { get }
@@ -17,6 +18,7 @@ public protocol BaseRequest {
     var body: [String: String]? { get }
 }
 
+/// Supported HTTP request methods.
 public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
@@ -25,6 +27,7 @@ public enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
+/// Provides default values for properties in `BaseRequest`.
 extension BaseRequest {
     
     var scheme: String {
@@ -52,7 +55,7 @@ extension BaseRequest {
     }
 }
 
-
+/// Constructs a `URLRequest` from the request configuration using `URLComponents`.
 extension BaseRequest {
     public func asURLRequest() -> URLRequest {
         var components = URLComponents()
