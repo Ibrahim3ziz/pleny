@@ -20,6 +20,7 @@ final class HomeRemoteDataSource: HomeRemoteDataSourceInterface {
     }
     
     func fetchPosts() -> AnyPublisher<PostsEntity, NetworkError> {
-        networkService.execute(HomeRequest(), model: PostsEntity.self)
+        networkService.execute(FeedRequest(), model: PostsEntity.self)
+    }
     }
 }

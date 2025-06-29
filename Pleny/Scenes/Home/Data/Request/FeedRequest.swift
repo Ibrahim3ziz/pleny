@@ -1,5 +1,5 @@
 //
-//  HomeRequest.swift
+//  FeedRequest.swift
 //  Pleny
 //
 //  Created by Ibrahim Abdul Aziz on 28/06/2025.
@@ -8,7 +8,7 @@
 import Foundation
 import NetworkKit
 
-struct HomeRequest: BaseRequest {
+struct FeedRequest: BaseRequest {
     
     var scheme: String = "https"
     
