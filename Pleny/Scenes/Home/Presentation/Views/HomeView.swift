@@ -48,7 +48,7 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            viewModel.getData()
+            viewModel.getPosts()
         }
         .background(Color.white)
     }

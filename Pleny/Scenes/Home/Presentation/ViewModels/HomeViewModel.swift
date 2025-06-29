@@ -24,14 +24,22 @@ final class HomeViewModel: ObservableObject {
         self.useCase = useCase
     }
     
-    func getData() {
+    func getPosts() {
         isLoading = true
         error = nil
         useCase.fetchPosts()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard let self else { return }
-                self.isLoading = false
+                isLoading = false
+                if case let .failure(err) = completion {
+                    self.error = err
+                }
+            } receiveValue: { [weak self] entity in
+                self?.posts = entity.posts
+            }
+            .store(in: &cancellables)
+    }
                 if case let .failure(err) = completion {
                     self.error = err
                 }
