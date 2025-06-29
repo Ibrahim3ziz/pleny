@@ -13,11 +13,11 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                CustomNavBar(text: .constant(""), beginSearching: {
-                    // Handle search start
-                }, cancelButtonTapped: {
-                    // Handle cancel
-                })
+                CustomNavBar(searchText: .constant("")) {
+                    print("Search clicked")
+                } cancelAction: {
+                    print("Search Cancel clicked")
+                }
                 
                 if viewModel.isLoading {
                     

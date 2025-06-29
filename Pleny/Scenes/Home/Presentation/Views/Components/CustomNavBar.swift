@@ -9,13 +9,18 @@ import SwiftUI
 
 struct CustomNavBar: View {
     @State private var isSearchingActive: Bool = false
-    @Binding var text: String
+    @Binding var searchText: String
     @State var beginSearching: () -> Void
-    @State var cancelButtonTapped: () -> Void
-    
+    @State var cancelAction: (() -> Void)?
+
     var body: some View {
         if isSearchingActive {
             // handle textfield
+            SerachTextField(placeholder: "Search", searchText: $searchText, leadingIcon: "icon-home-search", trailingIcon: "icon-searchbar-cancel", keyboardType: .default) {
+                isSearchingActive.toggle()
+                cancelAction?()
+                print(">>> Cancel Action <<<")
+            }
         } else {
             DefaultNavBar {
                 isSearchingActive.toggle()
@@ -56,9 +61,9 @@ struct DefaultNavBar: View {
 
 
 #Preview {
-    CustomNavBar(text: .constant("")) {
-        print("")
-    } cancelButtonTapped: {
-        print("")
+    CustomNavBar(searchText: .constant("Food test")) {
+        print(">>> Search Action <<<")
+    } cancelAction: {
+        print(">>> Cancel Action <<<")
     }
 }
