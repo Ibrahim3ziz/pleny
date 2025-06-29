@@ -47,6 +47,9 @@ struct HomeView: View {
                     .shadow(radius: 4)
             }
         }
+        .onAppear {
+            viewModel.getData()
+        }
         .background(Color.white)
     }
 }
