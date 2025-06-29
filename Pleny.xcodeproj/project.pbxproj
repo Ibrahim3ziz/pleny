@@ -27,6 +27,7 @@
 		8F88388E2E108ED300E149EF /* HomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88388D2E108ED300E149EF /* HomeRemoteDataSource.swift */; };
 		8F8838902E1094CA00E149EF /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88388F2E1094CA00E149EF /* HomeUseCase.swift */; };
 		8F8838922E10C26C00E149EF /* PostImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838912E10C26C00E149EF /* PostImageGrid.swift */; };
+		8F8839E92E11EBF300E149EF /* SerachTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839E82E11EBF300E149EF /* SerachTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		8F88388D2E108ED300E149EF /* HomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSource.swift; sourceTree = "<group>"; };
 		8F88388F2E1094CA00E149EF /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		8F8838912E10C26C00E149EF /* PostImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageGrid.swift; sourceTree = "<group>"; };
+		8F8839E82E11EBF300E149EF /* SerachTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +363,7 @@
 				8F8838372E0FA07900E149EF /* CustomNavBar.swift */,
 				8F8838882E0FB36500E149EF /* PostView.swift */,
 				8F8838912E10C26C00E149EF /* PostImageGrid.swift */,
+				8F8839E82E11EBF300E149EF /* SerachTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				8F88371C2E0F704F00E149EF /* HomeViewModel.swift in Sources */,
 				8F8838922E10C26C00E149EF /* PostImageGrid.swift in Sources */,
 				8F8838892E0FB36500E149EF /* PostView.swift in Sources */,
+				8F8839E92E11EBF300E149EF /* SerachTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
