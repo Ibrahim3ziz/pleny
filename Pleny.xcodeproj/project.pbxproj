@@ -28,6 +28,7 @@
 		8F8838902E1094CA00E149EF /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88388F2E1094CA00E149EF /* HomeUseCase.swift */; };
 		8F8838922E10C26C00E149EF /* PostImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838912E10C26C00E149EF /* PostImageGrid.swift */; };
 		8F8839E92E11EBF300E149EF /* SerachTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839E82E11EBF300E149EF /* SerachTextField.swift */; };
+		8F8839EB2E11F8F200E149EF /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839EA2E11F8F200E149EF /* SearchRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		8F88388F2E1094CA00E149EF /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		8F8838912E10C26C00E149EF /* PostImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageGrid.swift; sourceTree = "<group>"; };
 		8F8839E82E11EBF300E149EF /* SerachTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachTextField.swift; sourceTree = "<group>"; };
+		8F8839EA2E11F8F200E149EF /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				8F88371E2E0F732D00E149EF /* FeedRequest.swift */,
+				8F8839EA2E11F8F200E149EF /* SearchRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8839EB2E11F8F200E149EF /* SearchRequest.swift in Sources */,
 				8F88388B2E1089A900E149EF /* HomeRepository.swift in Sources */,
 				8F8838382E0FA07900E149EF /* CustomNavBar.swift in Sources */,
 				8F88388E2E108ED300E149EF /* HomeRemoteDataSource.swift in Sources */,
