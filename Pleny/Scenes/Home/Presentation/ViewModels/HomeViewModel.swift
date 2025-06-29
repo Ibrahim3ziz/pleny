@@ -19,9 +19,24 @@ final class HomeViewModel: ObservableObject {
     @Published var posts: [Post] = []
     @Published var isLoading: Bool = false
     @Published var error: NetworkError?
+    @Published var isSearching: Bool = false
+    @Published var searchText: String = ""
     
     init(useCase: HomeUseCaseInterface = HomeUseCase()) {
         self.useCase = useCase
+        
+        $searchText
+            .removeDuplicates()
+            .sink { [weak self] text in
+                guard let self else { return }
+                
+                if text.isEmpty {
+                    self.getPosts()
+                } else if text.count >= 2 {
+                    self.searchPosts()
+                }
+            }
+            .store(in: &cancellables)
     }
     
     func getPosts() {
@@ -40,6 +55,17 @@ final class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+    func searchPosts() {
+        isLoading = true
+        isSearching = true
+        error = nil
+        useCase.searchPosts(query: searchText)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                guard let self else { return }
+                isLoading = false
+                isSearching = false
                 if case let .failure(err) = completion {
                     self.error = err
                 }
