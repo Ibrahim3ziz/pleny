@@ -10,6 +10,7 @@ import Combine
 
 protocol HomeUseCaseInterface: AnyObject {
     func fetchPosts() -> AnyPublisher<PostsEntity, NetworkError>
+    func searchPosts(query: String) -> AnyPublisher<PostsEntity, NetworkError>
 }
 
 final class HomeUseCase: HomeUseCaseInterface {
@@ -23,5 +24,9 @@ final class HomeUseCase: HomeUseCaseInterface {
     
     func fetchPosts() -> AnyPublisher<PostsEntity, NetworkError> {
         repository.fetchPosts()
+    }
+    
+    func searchPosts(query: String) -> AnyPublisher<PostsEntity, NetworkError> {
+        repository.searchPosts(query: query)
     }
 }
