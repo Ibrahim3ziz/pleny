@@ -11,7 +11,6 @@ import SwiftUI
 struct PlenyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
         }
     }
 }

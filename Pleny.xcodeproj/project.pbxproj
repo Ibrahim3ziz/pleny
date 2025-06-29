@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F8836DE2E0E3C2700E149EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836DB2E0E3C2700E149EF /* ContentView.swift */; };
 		8F8836DF2E0E3C2700E149EF /* PlenyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8836DC2E0E3C2700E149EF /* PlenyApp.swift */; };
 		8F8836E02E0E3C2700E149EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8836D82E0E3C2700E149EF /* Preview Assets.xcassets */; };
 		8F8836E12E0E3C2700E149EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8836DA2E0E3C2700E149EF /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 		8F8836C52E0E3C1F00E149EF /* PlenyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlenyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8836D82E0E3C2700E149EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8F8836DA2E0E3C2700E149EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F8836DB2E0E3C2700E149EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F8836DC2E0E3C2700E149EF /* PlenyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyApp.swift; sourceTree = "<group>"; };
 		8F8836E22E0E3C2A00E149EF /* PlenyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyTests.swift; sourceTree = "<group>"; };
 		8F8836E52E0E3C2C00E149EF /* PlenyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyUITests.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				8F8836EA2E0E3CE600E149EF /* Scenes */,
 				8F8836D92E0E3C2700E149EF /* Preview Content */,
 				8F8836DA2E0E3C2700E149EF /* Assets.xcassets */,
-				8F8836DB2E0E3C2700E149EF /* ContentView.swift */,
 				8F8836DC2E0E3C2700E149EF /* PlenyApp.swift */,
 			);
 			path = Pleny;
@@ -422,7 +419,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8836DE2E0E3C2700E149EF /* ContentView.swift in Sources */,
 				8F8836DF2E0E3C2700E149EF /* PlenyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
