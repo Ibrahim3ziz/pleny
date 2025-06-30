@@ -13,14 +13,18 @@ final class AuthViewModel: ObservableObject {
     // MARK: - Dependencies
     private var cancellables = Set<AnyCancellable>()
     private let useCase: AuthUseCaseInterface
+    private let coordinator: AppCoordinatorProtocol?
     
     // MARK: - Published Outputs
     @Published var user: UserEntity?
     @Published var isLoading: Bool = false
     @Published var error: NetworkError?
     
-    init(useCase: AuthUseCaseInterface = AuthUseCase()) {
+    init(useCase: AuthUseCaseInterface = AuthUseCase(),
+         coordinator: AppCoordinatorProtocol? = nil
+    ) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
     func login(username: String, password: String) {

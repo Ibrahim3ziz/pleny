@@ -9,12 +9,17 @@ import SwiftUI
 
 struct AuthView: View {
     
+    @StateObject private var viewModel: AuthViewModel
     @State private var username: String = ""
     @State private var password: String = ""
     
     private var areFieldsValid: Bool {
         !username.trimmingCharacters(in: .whitespaces).isEmpty &&
         !password.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+    
+    init(coordinator: AppCoordinator) {
+        _viewModel = StateObject(wrappedValue: AuthViewModel(coordinator: coordinator))
     }
     
     var body: some View {
@@ -76,5 +81,5 @@ struct AuthView: View {
 
 
 #Preview {
-    AuthView()
+    AuthView(coordinator: AppCoordinator())
 }
