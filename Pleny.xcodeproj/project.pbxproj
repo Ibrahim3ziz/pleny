@@ -30,6 +30,7 @@
 		8F8839E92E11EBF300E149EF /* SerachTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839E82E11EBF300E149EF /* SerachTextField.swift */; };
 		8F8839EB2E11F8F200E149EF /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839EA2E11F8F200E149EF /* SearchRequest.swift */; };
 		8F8839EE2E121AD200E149EF /* SimpleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839ED2E121AD200E149EF /* SimpleInputField.swift */; };
+		8F8839F02E1228BB00E149EF /* PlenyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839EF2E1228B600E149EF /* PlenyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		8F8839E82E11EBF300E149EF /* SerachTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachTextField.swift; sourceTree = "<group>"; };
 		8F8839EA2E11F8F200E149EF /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		8F8839ED2E121AD200E149EF /* SimpleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputField.swift; sourceTree = "<group>"; };
+		8F8839EF2E1228B600E149EF /* PlenyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +386,7 @@
 		8F8839EC2E12129500E149EF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839EF2E1228B600E149EF /* PlenyButton.swift */,
 				8F8839E82E11EBF300E149EF /* SerachTextField.swift */,
 				8F8839ED2E121AD200E149EF /* SimpleInputField.swift */,
 			);
@@ -543,6 +546,7 @@
 				8F8838902E1094CA00E149EF /* HomeUseCase.swift in Sources */,
 				8F8837772E0F773700E149EF /* HomeView.swift in Sources */,
 				8F8839EE2E121AD200E149EF /* SimpleInputField.swift in Sources */,
+				8F8839F02E1228BB00E149EF /* PlenyButton.swift in Sources */,
 				8F8836DF2E0E3C2700E149EF /* PlenyApp.swift in Sources */,
 				8F88371C2E0F704F00E149EF /* HomeViewModel.swift in Sources */,
 				8F8838922E10C26C00E149EF /* PostImageGrid.swift in Sources */,
