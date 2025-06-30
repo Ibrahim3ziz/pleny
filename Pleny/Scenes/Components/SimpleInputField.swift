@@ -14,7 +14,9 @@ struct SimpleInputField: View {
     var trailingIcon: String?
     var keyboardType: UIKeyboardType = .default
     @Binding var text: String
-    var tailingIconAction: (() -> Void)?
+    var isSecureTextEntry: Bool = false
+    
+    @State private var isPasswordVisible: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -22,6 +24,7 @@ struct SimpleInputField: View {
                 .font(.headline)
                 .foregroundColor(.primary)
                 .padding(.leading, 16)
+            
             HStack {
                 if let leadingIcon {
                     Image(leadingIcon)
@@ -30,22 +33,33 @@ struct SimpleInputField: View {
                         .padding(.leading, 12)
                 }
                 
-                TextField(placeholder, text: $text)
-                    .keyboardType(keyboardType)
-                    .font(.system(size: 20))
-                    .multilineTextAlignment(.leading)
-                    .frame(maxHeight: .infinity)
-                    .padding(.horizontal, 14)
+                Group {
+                    if isSecureTextEntry && !isPasswordVisible {
+                        SecureField(placeholder, text: $text)
+                    } else {
+                        TextField(placeholder, text: $text)
+                    }
+                }
+                .keyboardType(keyboardType)
+                .font(.system(size: 20))
+                .multilineTextAlignment(.leading)
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal, 14)
                 
-                Button {
-                    tailingIconAction?()
-                } label: {
-                    if let trailingIcon {
-                        Image(trailingIcon)
+                if isSecureTextEntry {
+                    Button {
+                        isPasswordVisible.toggle()
+                    } label: {
+                        Image(isPasswordVisible ? "icon-textfield-showPassword" : "icon-textfield-showPassword") // here change the icon
                             .resizable()
-                            .frame(width: 32, height: 32)
+                            .frame(width: 24, height: 24)
                             .padding(.trailing, 12)
                     }
+                } else if let trailingIcon {
+                    Image(trailingIcon)
+                        .resizable()
+                        .frame(width: 32, height: 32)
+                        .padding(.trailing, 12)
                 }
             }
             .background(
@@ -60,9 +74,7 @@ struct SimpleInputField: View {
 }
 
 #Preview {
-    SimpleInputField(title: "Username", placeholder: "Enter your username", text: .constant(""))
+    SimpleInputField(title: "Username", placeholder: "Enter your username", text: .constant(""), isSecureTextEntry: false)
     
-    SimpleInputField(title: "Password", placeholder: "Enter your password", trailingIcon: "icon-textfield-showPassword", keyboardType: .default, text: .constant(""), tailingIconAction: {
-        print("Training Action")
-    })
+    SimpleInputField(title: "Password", placeholder: "Enter your password", trailingIcon: "icon-textfield-showPassword", keyboardType: .default, text: .constant(""), isSecureTextEntry: true)
 }

@@ -31,9 +31,7 @@ struct AuthView: View {
                         trailingIcon: "icon-textfield-showPassword",
                         keyboardType: .default,
                         text: .constant(""),
-                        tailingIconAction: {
-                            print("Training Action")
-                        }
+                        isSecureTextEntry: true
                     )
                 }
             }
