@@ -18,42 +18,56 @@ struct AuthView: View {
     }
     
     var body: some View {
-        VStack {
-            ScrollView {
-                VStack(spacing: 16) {
-                    Image(ImageResource.staticLogin)
-                        .resizable()
-                        .frame(height: 440)
-                        .frame(maxWidth: .infinity)
-                        .scaledToFit()
-                    
-                    Text("Welcome")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color("primaryColor"))
-                    
-                    SimpleInputField(title: "Username", placeholder: "Enter your username", text: $username)
-                    
-                    SimpleInputField(
-                        title: "Password",
-                        placeholder: "Enter your password",
-                        trailingIcon: "icon-textfield-showPassword",
-                        keyboardType: .default,
-                        text: $password,
-                        isSecureTextEntry: true
-                    )
+        ZStack {
+            VStack {
+                ScrollView {
+                    VStack(spacing: 16) {
+                        Image(ImageResource.staticLogin)
+                            .resizable()
+                            .frame(height: 440)
+                            .frame(maxWidth: .infinity)
+                            .scaledToFit()
+                        
+                        Text("Welcome")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color("primaryColor"))
+                        
+                        SimpleInputField(title: "Username", placeholder: "Enter your username", text: $username)
+                        
+                        SimpleInputField(
+                            title: "Password",
+                            placeholder: "Enter your password",
+                            trailingIcon: "icon-textfield-showPassword",
+                            keyboardType: .default,
+                            text: $password,
+                            isSecureTextEntry: true
+                        )
+                    }
                 }
+                
+                PlenyButton(
+                    btnTitle: "Sign In",
+                    btnColor: Color("primaryColor"),
+                    btnTitleColor: Color.white,
+                    isEnabled: areFieldsValid
+                ) {
+                    viewModel.login(username: "emilys", password: "emilyspass")
+                    print("Sign In Tapped")
+                }
+                .padding(.bottom)
             }
             
-            PlenyButton(
-                btnTitle: "Sign In",
-                btnColor: Color("primaryColor"),
-                btnTitleColor: Color.white,
-                isEnabled: areFieldsValid
-            ) {
-                print("Button Tapped")
+            // Centered loading overlay
+            if viewModel.isLoading {
+                Color.black.opacity(0.1).ignoresSafeArea()
+                ProgressView("Loading...")
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(12)
+                    .shadow(radius: 4)
             }
-            .padding(.bottom)
         }
         .ignoresSafeArea(edges: .top)
         .background(Color.white)
