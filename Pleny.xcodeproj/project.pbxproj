@@ -40,6 +40,7 @@
 		8F8839FE2E123BC400E149EF /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839FD2E123BC400E149EF /* AuthUseCase.swift */; };
 		8F883A002E123C1100E149EF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839FF2E123C1100E149EF /* AuthViewModel.swift */; };
 		8F883A022E12AF1300E149EF /* ImagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F883A012E12AF1300E149EF /* ImagePreview.swift */; };
+		8F883A042E12D38900E149EF /* MockHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F883A032E12D38900E149EF /* MockHomeUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		8F8839FD2E123BC400E149EF /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		8F8839FF2E123C1100E149EF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		8F883A012E12AF1300E149EF /* ImagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreview.swift; sourceTree = "<group>"; };
+		8F883A032E12D38900E149EF /* MockHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8F8836E22E0E3C2A00E149EF /* PlenyTests.swift */,
+				8F883A032E12D38900E149EF /* MockHomeUseCase.swift */,
 			);
 			path = PlenyTests;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F883A042E12D38900E149EF /* MockHomeUseCase.swift in Sources */,
 				8F8836E42E0E3C2A00E149EF /* PlenyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

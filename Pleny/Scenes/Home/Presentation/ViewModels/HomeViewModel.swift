@@ -22,21 +22,22 @@ final class HomeViewModel: ObservableObject {
     @Published var isSearching: Bool = false
     @Published var searchText: String = ""
     
-    init(useCase: HomeUseCaseInterface = HomeUseCase()) {
+    init(useCase: HomeUseCaseInterface = HomeUseCase(), bindSearch: Bool = true) {
         self.useCase = useCase
-        
-        $searchText
-            .removeDuplicates()
-            .sink { [weak self] text in
-                guard let self else { return }
-                
-                if text.isEmpty {
-                    self.getPosts()
-                } else if text.count >= 2 {
-                    self.searchPosts()
+        if bindSearch {
+            $searchText
+                .removeDuplicates()
+                .sink { [weak self] text in
+                    guard let self else { return }
+                    
+                    if text.isEmpty {
+                        self.getPosts()
+                    } else if text.count >= 2 {
+                        self.searchPosts()
+                    }
                 }
-            }
-            .store(in: &cancellables)
+                .store(in: &cancellables)
+        }
     }
     
     func getPosts() {
