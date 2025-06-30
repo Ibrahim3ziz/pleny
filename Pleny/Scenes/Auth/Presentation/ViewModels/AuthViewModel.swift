@@ -40,7 +40,7 @@ final class AuthViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] user in
                 self?.user = user
-                print("User data received: \(user)")
+                self?.coordinator?.navigateToMainFlow(with: user)
             }.store(in: &cancellables)
     }
 }
