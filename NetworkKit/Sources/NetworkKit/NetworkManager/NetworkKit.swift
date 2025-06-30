@@ -5,7 +5,7 @@ import Combine
 import Foundation
 
 /// A concrete implementation of `NetworkSessionInterface` to perform HTTP requests using Combine.
-public final class NetworkManager: NetworkSessionInterface, @unchecked Sendable {
+public final class NetworkManager: NetworkServiceInterface, @unchecked Sendable {
     
     /// Shared singleton instance of `NetworkManager`.
     public static let shared = NetworkManager()
