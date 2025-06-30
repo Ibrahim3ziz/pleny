@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct AuthView: View {
+    
+    @State private var username: String = ""
+    @State private var password: String = ""
+    
+    private var areFieldsValid: Bool {
+        !username.trimmingCharacters(in: .whitespaces).isEmpty &&
+        !password.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -23,14 +32,14 @@ struct AuthView: View {
                         .fontWeight(.bold)
                         .foregroundStyle(Color("primaryColor"))
                     
-                    SimpleInputField(title: "Username", placeholder: "Enter your username", text: .constant(""))
+                    SimpleInputField(title: "Username", placeholder: "Enter your username", text: $username)
                     
                     SimpleInputField(
                         title: "Password",
                         placeholder: "Enter your password",
                         trailingIcon: "icon-textfield-showPassword",
                         keyboardType: .default,
-                        text: .constant(""),
+                        text: $password,
                         isSecureTextEntry: true
                     )
                 }
@@ -40,7 +49,7 @@ struct AuthView: View {
                 btnTitle: "Sign In",
                 btnColor: Color("primaryColor"),
                 btnTitleColor: Color.white,
-                isEnabled: false
+                isEnabled: areFieldsValid
             ) {
                 print("Button Tapped")
             }
