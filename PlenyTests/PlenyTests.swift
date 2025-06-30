@@ -19,7 +19,7 @@ final class PlenyTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         mockUseCase = MockHomeUseCase()
-        viewModel = HomeViewModel(useCase: mockUseCase)
+        viewModel = HomeViewModel(useCase: mockUseCase, bindSearch: false)
         cancellables = []
     }
     
