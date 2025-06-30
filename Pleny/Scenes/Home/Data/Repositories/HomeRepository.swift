@@ -10,6 +10,7 @@ import NetworkKit
 
 protocol HomeRepositoryInterface: AnyObject {
     func fetchPosts() -> AnyPublisher<PostsEntity, NetworkError>
+    func searchPosts(query: String) -> AnyPublisher<PostsEntity, NetworkError>
 }
 
 final class HomeRepository: HomeRepositoryInterface {
@@ -22,5 +23,9 @@ final class HomeRepository: HomeRepositoryInterface {
     
     func fetchPosts() -> AnyPublisher<PostsEntity, NetworkError> {
         remoteDataSource.fetchPosts()
+    }
+    
+    func searchPosts(query: String) -> AnyPublisher<PostsEntity, NetworkError> {
+        remoteDataSource.searchPost(query: query)
     }
 }

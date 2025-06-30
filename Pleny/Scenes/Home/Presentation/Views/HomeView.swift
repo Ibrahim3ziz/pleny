@@ -13,11 +13,11 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                CustomNavBar(text: .constant(""), beginSearching: {
-                    // Handle search start
-                }, cancelButtonTapped: {
-                    // Handle cancel
-                })
+                CustomNavBar(searchText: $viewModel.searchText) {
+                    viewModel.isSearching = true // start searching
+                } cancelAction: {
+                    viewModel.isSearching = false // close the textfield, stop searching
+                }
                 
                 if viewModel.isLoading {
                     
@@ -48,7 +48,7 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            viewModel.getData()
+            viewModel.getPosts()
         }
         .background(Color.white)
     }
