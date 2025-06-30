@@ -51,7 +51,7 @@ extension BaseRequest {
     }
     
     var body: [String: String]? {
-        return [:]
+        return nil
     }
 }
 
