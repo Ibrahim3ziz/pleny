@@ -32,6 +32,7 @@
 		8F8839EB2E11F8F200E149EF /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839EA2E11F8F200E149EF /* SearchRequest.swift */; };
 		8F8839EE2E121AD200E149EF /* SimpleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839ED2E121AD200E149EF /* SimpleInputField.swift */; };
 		8F8839F02E1228BB00E149EF /* PlenyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839EF2E1228B600E149EF /* PlenyButton.swift */; };
+		8F8839F22E1234E400E149EF /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839F12E1234E400E149EF /* UserEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		8F8839EA2E11F8F200E149EF /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		8F8839ED2E121AD200E149EF /* SimpleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputField.swift; sourceTree = "<group>"; };
 		8F8839EF2E1228B600E149EF /* PlenyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyButton.swift; sourceTree = "<group>"; };
+		8F8839F12E1234E400E149EF /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 		8F8836F32E0E3D2800E149EF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839F12E1234E400E149EF /* UserEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				8F8839EB2E11F8F200E149EF /* SearchRequest.swift in Sources */,
 				8F88388B2E1089A900E149EF /* HomeRepository.swift in Sources */,
 				8F8838382E0FA07900E149EF /* CustomNavBar.swift in Sources */,
+				8F8839F22E1234E400E149EF /* UserEntity.swift in Sources */,
 				8F88388E2E108ED300E149EF /* HomeRemoteDataSource.swift in Sources */,
 				8F88371F2E0F732D00E149EF /* FeedRequest.swift in Sources */,
 				8F8838362E0F9B1700E149EF /* AppCoordinator.swift in Sources */,
