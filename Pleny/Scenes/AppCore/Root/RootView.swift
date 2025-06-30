@@ -12,14 +12,13 @@ struct RootView: View {
     
     var body: some View {
         Group {
-            switch coordinator.currentFlow {
+            switch coordinator.currentScreen {
             case .auth:
-                AuthView()
-                    .environmentObject(coordinator)
+                AuthView(coordinator: coordinator)
             case .main:
                 MainTabView()
-                    .environmentObject(coordinator)
             }
         }
+        .environmentObject(coordinator)
     }
 }

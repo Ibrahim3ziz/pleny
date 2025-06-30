@@ -7,20 +7,24 @@
 
 import Foundation
 
-final class AppCoordinator: ObservableObject {
-    enum AppFlow {
+protocol AppCoordinatorProtocol {
+    func navigateToMainFlow(with user: UserEntity)
+    func navigateToAuthFlow()
+}
+
+final class AppCoordinator: ObservableObject, AppCoordinatorProtocol {
+    enum Screen {
         case main
         case auth
     }
     
-    // TODO: - handle AppFlow
-    @Published var currentFlow: AppFlow = .main
+    @Published var currentScreen: Screen = .auth
     
-    func navigateToMainFlow() {
-        currentFlow = .main
+    func navigateToMainFlow(with user: UserEntity) {
+        currentScreen = .main
     }
     
     func navigateToAuthFlow() {
-        currentFlow = .auth
+        currentScreen = .auth
     }
 }

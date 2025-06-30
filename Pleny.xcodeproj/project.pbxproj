@@ -20,6 +20,7 @@
 		8F8837772E0F773700E149EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8837762E0F773700E149EF /* HomeView.swift */; };
 		8F88382E2E0F917F00E149EF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F88382D2E0F917F00E149EF /* RootView.swift */; };
 		8F8838312E0F922400E149EF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838302E0F922400E149EF /* MainTabView.swift */; };
+		8F8838332E0F93ED00E149EF /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838322E0F93ED00E149EF /* AuthView.swift */; };
 		8F8838362E0F9B1700E149EF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838352E0F9B1700E149EF /* AppCoordinator.swift */; };
 		8F8838382E0FA07900E149EF /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838372E0FA07900E149EF /* CustomNavBar.swift */; };
 		8F8838892E0FB36500E149EF /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838882E0FB36500E149EF /* PostView.swift */; };
@@ -29,6 +30,15 @@
 		8F8838922E10C26C00E149EF /* PostImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8838912E10C26C00E149EF /* PostImageGrid.swift */; };
 		8F8839E92E11EBF300E149EF /* SerachTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839E82E11EBF300E149EF /* SerachTextField.swift */; };
 		8F8839EB2E11F8F200E149EF /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839EA2E11F8F200E149EF /* SearchRequest.swift */; };
+		8F8839EE2E121AD200E149EF /* SimpleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839ED2E121AD200E149EF /* SimpleInputField.swift */; };
+		8F8839F02E1228BB00E149EF /* PlenyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839EF2E1228B600E149EF /* PlenyButton.swift */; };
+		8F8839F22E1234E400E149EF /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839F12E1234E400E149EF /* UserEntity.swift */; };
+		8F8839F42E1235B700E149EF /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839F32E1235AF00E149EF /* AuthRequest.swift */; };
+		8F8839F72E12371500E149EF /* UserBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839F62E12371400E149EF /* UserBody.swift */; };
+		8F8839FA2E123A6D00E149EF /* AuthRemotreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839F92E123A6D00E149EF /* AuthRemotreDataSource.swift */; };
+		8F8839FC2E123B4D00E149EF /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839FB2E123B4500E149EF /* AuthRepository.swift */; };
+		8F8839FE2E123BC400E149EF /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839FD2E123BC400E149EF /* AuthUseCase.swift */; };
+		8F883A002E123C1100E149EF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8839FF2E123C1100E149EF /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +74,7 @@
 		8F8837762E0F773700E149EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8F88382D2E0F917F00E149EF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8F8838302E0F922400E149EF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		8F8838322E0F93ED00E149EF /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		8F8838352E0F9B1700E149EF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8F8838372E0FA07900E149EF /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		8F8838882E0FB36500E149EF /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -73,6 +84,15 @@
 		8F8838912E10C26C00E149EF /* PostImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageGrid.swift; sourceTree = "<group>"; };
 		8F8839E82E11EBF300E149EF /* SerachTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachTextField.swift; sourceTree = "<group>"; };
 		8F8839EA2E11F8F200E149EF /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		8F8839ED2E121AD200E149EF /* SimpleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInputField.swift; sourceTree = "<group>"; };
+		8F8839EF2E1228B600E149EF /* PlenyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyButton.swift; sourceTree = "<group>"; };
+		8F8839F12E1234E400E149EF /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		8F8839F32E1235AF00E149EF /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
+		8F8839F62E12371400E149EF /* UserBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBody.swift; sourceTree = "<group>"; };
+		8F8839F92E123A6D00E149EF /* AuthRemotreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemotreDataSource.swift; sourceTree = "<group>"; };
+		8F8839FB2E123B4500E149EF /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		8F8839FD2E123BC400E149EF /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		8F8839FF2E123C1100E149EF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +180,7 @@
 		8F8836EA2E0E3CE600E149EF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839EC2E12129500E149EF /* Components */,
 				8F8838272E0F90A600E149EF /* AppCore */,
 				8F8836EC2E0E3CF000E149EF /* Auth */,
 				8F8836EB2E0E3CEC00E149EF /* Home */,
@@ -208,6 +229,8 @@
 		8F8836EF2E0E3D0900E149EF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839F52E1236FF00E149EF /* Request */,
+				8F8839F82E123A5600E149EF /* DataSource */,
 				8F8836F42E0E3D2E00E149EF /* Repositories */,
 			);
 			path = Data;
@@ -216,6 +239,7 @@
 		8F8836F02E0E3D0F00E149EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8F8838322E0F93ED00E149EF /* AuthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +247,7 @@
 		8F8836F12E0E3D1400E149EF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839FF2E123C1100E149EF /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -230,6 +255,7 @@
 		8F8836F22E0E3D1E00E149EF /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839FD2E123BC400E149EF /* AuthUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -237,6 +263,7 @@
 		8F8836F32E0E3D2800E149EF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839F12E1234E400E149EF /* UserEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -244,6 +271,7 @@
 		8F8836F42E0E3D2E00E149EF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				8F8839FB2E123B4500E149EF /* AuthRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -366,7 +394,6 @@
 				8F8838372E0FA07900E149EF /* CustomNavBar.swift */,
 				8F8838882E0FB36500E149EF /* PostView.swift */,
 				8F8838912E10C26C00E149EF /* PostImageGrid.swift */,
-				8F8839E82E11EBF300E149EF /* SerachTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -375,6 +402,33 @@
 			isa = PBXGroup;
 			children = (
 				8F88388D2E108ED300E149EF /* HomeRemoteDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		8F8839EC2E12129500E149EF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8F8839EF2E1228B600E149EF /* PlenyButton.swift */,
+				8F8839E82E11EBF300E149EF /* SerachTextField.swift */,
+				8F8839ED2E121AD200E149EF /* SimpleInputField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8F8839F52E1236FF00E149EF /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				8F8839F62E12371400E149EF /* UserBody.swift */,
+				8F8839F32E1235AF00E149EF /* AuthRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		8F8839F82E123A5600E149EF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8F8839F92E123A6D00E149EF /* AuthRemotreDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -523,18 +577,28 @@
 				8F8839EB2E11F8F200E149EF /* SearchRequest.swift in Sources */,
 				8F88388B2E1089A900E149EF /* HomeRepository.swift in Sources */,
 				8F8838382E0FA07900E149EF /* CustomNavBar.swift in Sources */,
+				8F8839FE2E123BC400E149EF /* AuthUseCase.swift in Sources */,
+				8F8839F22E1234E400E149EF /* UserEntity.swift in Sources */,
 				8F88388E2E108ED300E149EF /* HomeRemoteDataSource.swift in Sources */,
 				8F88371F2E0F732D00E149EF /* FeedRequest.swift in Sources */,
 				8F8838362E0F9B1700E149EF /* AppCoordinator.swift in Sources */,
 				8F88382E2E0F917F00E149EF /* RootView.swift in Sources */,
 				8F8838312E0F922400E149EF /* MainTabView.swift in Sources */,
+				8F8839FC2E123B4D00E149EF /* AuthRepository.swift in Sources */,
 				8F88371A2E0F6FE200E149EF /* PostsEntity.swift in Sources */,
 				8F8838902E1094CA00E149EF /* HomeUseCase.swift in Sources */,
 				8F8837772E0F773700E149EF /* HomeView.swift in Sources */,
+				8F8839F42E1235B700E149EF /* AuthRequest.swift in Sources */,
+				8F8839FA2E123A6D00E149EF /* AuthRemotreDataSource.swift in Sources */,
+				8F8839EE2E121AD200E149EF /* SimpleInputField.swift in Sources */,
+				8F8839F72E12371500E149EF /* UserBody.swift in Sources */,
+				8F8839F02E1228BB00E149EF /* PlenyButton.swift in Sources */,
 				8F8836DF2E0E3C2700E149EF /* PlenyApp.swift in Sources */,
 				8F88371C2E0F704F00E149EF /* HomeViewModel.swift in Sources */,
 				8F8838922E10C26C00E149EF /* PostImageGrid.swift in Sources */,
 				8F8838892E0FB36500E149EF /* PostView.swift in Sources */,
+				8F8838332E0F93ED00E149EF /* AuthView.swift in Sources */,
+				8F883A002E123C1100E149EF /* AuthViewModel.swift in Sources */,
 				8F8839E92E11EBF300E149EF /* SerachTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

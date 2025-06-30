@@ -22,5 +22,5 @@ struct FeedRequest: BaseRequest {
     
     var parameter: [String : String]? = [:]
     
-    var body: [String : String]? = nil
+    var body: [String : Any]? = nil
 }

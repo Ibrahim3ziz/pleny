@@ -26,5 +26,5 @@ struct SearchRequest: BaseRequest {
         return ["q": query]
     }
     
-    var body: [String : String]? = nil
+    var body: [String : Any]? = nil
 }
