@@ -9,19 +9,35 @@ import SwiftUI
 
 struct PostImageGrid: View {
     let images: [String]
+    var postImageAction: (() -> Void)?
     
     var body: some View {
         switch images.count {
         case 1:
             singleImage(images[0])
+                .onTapGesture {
+                    postImageAction?()
+                }
         case 2:
             twoImages(images)
+                .onTapGesture {
+                    postImageAction?()
+                }
         case 3:
             threeImages(images)
+                .onTapGesture {
+                    postImageAction?()
+                }
         case 4:
             fourImages(images)
+                .onTapGesture {
+                    postImageAction?()
+                }
         default:
             gridWithMoreThanFour(images)
+                .onTapGesture {
+                    postImageAction?()
+                }
         }
     }
     

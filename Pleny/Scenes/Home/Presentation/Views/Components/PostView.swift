@@ -13,6 +13,8 @@ struct PostView: View {
     @State var profileImage: String
     @State var post: String
     @State var postImages: [String]?
+    var profileImageAction: (() -> Void)?
+    var postImageAction: (() -> Void)?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -21,6 +23,9 @@ struct PostView: View {
                     .resizable()
                     .frame(width: 50, height: 50)
                     .clipShape(Circle())
+                    .onTapGesture {
+                        profileImageAction?()
+                    }
                 
                 VStack(alignment: .leading) {
                     Text(username) // username
@@ -37,7 +42,9 @@ struct PostView: View {
                 .font(.body)
             
             if postImages?.count ?? 0 > 0 {
-                PostImageGrid(images: postImages ?? [])
+                PostImageGrid(images: postImages ?? []) {
+                    postImageAction?()
+                }
             }
         }
         .frame(maxHeight: .infinity)
