@@ -15,7 +15,7 @@ public protocol BaseRequest {
     var method: HTTPMethod { get }
     var headers: [String: String]? { get }
     var parameter: [String: String]? { get }
-    var body: [String: String]? { get }
+    var body: [String: Any]? { get }
 }
 
 /// Supported HTTP request methods.
@@ -50,7 +50,7 @@ extension BaseRequest {
         return [:]
     }
     
-    var body: [String: String]? {
+    var body: [String: Any]? {
         return nil
     }
 }
