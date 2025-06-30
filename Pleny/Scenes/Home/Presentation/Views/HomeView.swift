@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = HomeViewModel()
+    @StateObject private var viewModel = HomeViewModel()
+    @State private var selectedImage: String? = nil
+    @State private var isImageViewerPresented = false
     
     var body: some View {
         ZStack {
@@ -29,7 +31,13 @@ struct HomeView: View {
                     Spacer()
                 } else {
                     List(viewModel.posts, id: \.id) { post in
-                        PostView(username: "Neama Ahmed", date: "2 days ago", profileImage: "static-profile-image", post: post.title, postImages: ["static-post-image", "static-post-image", "static-post-image", "static-post-image", "static-post-image"])
+                        PostView(username: "Neama Ahmed", date: "2 days ago", profileImage: "static-profile-image", post: post.title, postImages: ["static-post-image", "static-post-image", "static-post-image", "static-post-image", "static-post-image"]) {
+                            selectedImage = "static-profile-image"
+                            isImageViewerPresented = true
+                        } postImageAction: {
+                            selectedImage = "static-post-image"
+                            isImageViewerPresented = true
+                        }
                     }
                     .listStyle(.plain)
                     .background(.white)
@@ -45,6 +53,10 @@ struct HomeView: View {
                     .background(Color.white)
                     .cornerRadius(12)
                     .shadow(radius: 4)
+            }
+            
+            if let imageName = selectedImage, isImageViewerPresented {
+                ImagePreview(imageName: imageName, isPresented: $isImageViewerPresented)
             }
         }
         .onAppear {
