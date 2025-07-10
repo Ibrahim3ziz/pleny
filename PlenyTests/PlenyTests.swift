@@ -102,16 +102,4 @@ final class PlenyTests: XCTestCase {
             wait(for: [expectation], timeout: 1.0)
         }
     }
-    
-    func testExample() {
-        // Given
-        let firstNumber = 10
-        let secondNumber = 5
-        
-        // When
-        let result = firstNumber + secondNumber
-        
-        // Then
-        XCTAssertEqual(result, 15)
-    }
 }
