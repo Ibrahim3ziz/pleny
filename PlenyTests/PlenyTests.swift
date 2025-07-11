@@ -35,7 +35,7 @@ final class PlenyTests: XCTestCase {
     func test_getPosts_success_shouldUpdatePosts() {
         // Given
         let expectedPosts = [
-            Post(
+            PostEntity(
                 id: 1,
                 title: "Test",
                 body: "Hello",
@@ -43,7 +43,7 @@ final class PlenyTests: XCTestCase {
                 reactions: Reactions(likes: 10, dislikes: 1),
                 views: 100,
                 userID: 1),
-            Post(
+            PostEntity(
                 id: 2,
                 title: "Another",
                 body: "World",
@@ -54,7 +54,7 @@ final class PlenyTests: XCTestCase {
             )
         ]
         
-        let response = PostsEntity(
+        let response = PostsResponse(
             posts: expectedPosts,
             total: 2,
             skip: 0,
@@ -84,7 +84,7 @@ final class PlenyTests: XCTestCase {
     
     // MARK: - Performance (Optional)
     func testPerformanceExample() throws {
-        mockUseCase.fetchPostsResult = Just(PostsEntity(posts: [], total: 0, skip: 0, limit: 10))
+        mockUseCase.fetchPostsResult = Just(PostsResponse(posts: [], total: 0, skip: 0, limit: 10))
             .setFailureType(to: NetworkError.self)
             .eraseToAnyPublisher()
         
@@ -101,17 +101,5 @@ final class PlenyTests: XCTestCase {
             viewModel.getPosts()
             wait(for: [expectation], timeout: 1.0)
         }
-    }
-    
-    func testExample() {
-        // Given
-        let firstNumber = 10
-        let secondNumber = 5
-        
-        // When
-        let result = firstNumber + secondNumber
-        
-        // Then
-        XCTAssertEqual(result, 15)
     }
 }

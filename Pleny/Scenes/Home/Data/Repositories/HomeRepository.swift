@@ -9,8 +9,8 @@ import Combine
 import NetworkKit
 
 protocol HomeRepositoryInterface: AnyObject {
-    func fetchPosts() -> AnyPublisher<PostsEntity, NetworkError>
-    func searchPosts(query: String) -> AnyPublisher<PostsEntity, NetworkError>
+    func fetchPosts() -> AnyPublisher<PostsResponse, NetworkError>
+    func searchPosts(query: String) -> AnyPublisher<PostsResponse, NetworkError>
 }
 
 final class HomeRepository: HomeRepositoryInterface {
@@ -21,11 +21,11 @@ final class HomeRepository: HomeRepositoryInterface {
         self.remoteDataSource = remoteDataSource
     }
     
-    func fetchPosts() -> AnyPublisher<PostsEntity, NetworkError> {
+    func fetchPosts() -> AnyPublisher<PostsResponse, NetworkError> {
         remoteDataSource.fetchPosts()
     }
     
-    func searchPosts(query: String) -> AnyPublisher<PostsEntity, NetworkError> {
+    func searchPosts(query: String) -> AnyPublisher<PostsResponse, NetworkError> {
         remoteDataSource.searchPost(query: query)
     }
 }

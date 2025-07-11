@@ -16,7 +16,7 @@ final class HomeViewModel: ObservableObject {
     private let useCase: HomeUseCaseInterface
     
     // MARK: - Published Outputs
-    @Published var posts: [Post] = []
+    @Published var posts: [PostEntity] = []
     @Published var isLoading: Bool = false
     @Published var error: NetworkError?
     @Published var isSearching: Bool = false
