@@ -12,21 +12,21 @@ import NetworkKit
 // MARK: - Mock Use Case
 final class MockHomeUseCase: HomeUseCaseInterface {
     
-    var fetchPostsResult: AnyPublisher<Pleny.PostsEntity, NetworkKit.NetworkError> =
-        Just(PostsEntity(posts: [], total: 0, skip: 0, limit: 0))
+    var fetchPostsResult: AnyPublisher<Pleny.PostsResponse, NetworkKit.NetworkError> =
+        Just(PostsResponse(posts: [], total: 0, skip: 0, limit: 0))
         .setFailureType(to: NetworkKit.NetworkError.self)
         .eraseToAnyPublisher()
 
-    var searchPostsResult: AnyPublisher<Pleny.PostsEntity, NetworkKit.NetworkError> =
-        Just(PostsEntity(posts: [], total: 0, skip: 0, limit: 0))
+    var searchPostsResult: AnyPublisher<Pleny.PostsResponse, NetworkKit.NetworkError> =
+        Just(PostsResponse(posts: [], total: 0, skip: 0, limit: 0))
         .setFailureType(to: NetworkKit.NetworkError.self)
         .eraseToAnyPublisher()
     
-    func fetchPosts() -> AnyPublisher<Pleny.PostsEntity, NetworkKit.NetworkError> {
+    func fetchPosts() -> AnyPublisher<Pleny.PostsResponse, NetworkKit.NetworkError> {
         fetchPostsResult
     }
 
-    func searchPosts(query: String) -> AnyPublisher<Pleny.PostsEntity, NetworkKit.NetworkError> {
+    func searchPosts(query: String) -> AnyPublisher<Pleny.PostsResponse, NetworkKit.NetworkError> {
         searchPostsResult
     }
 }
